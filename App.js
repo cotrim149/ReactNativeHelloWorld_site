@@ -3,16 +3,19 @@ import { Text, View } from 'react-native';
 
 import Bananas from './components/Bananas';
 import Greetings from './components/Greetings';
+import Blink from './components/Blink';
 
 export default class HelloWorldApp extends Component {
   render() {
-    return (
+    return ( 
       <View>
         <Text>Hello world!</Text>
         <Bananas></Bananas>
 
         <Greetings name='Jaina'/>
         <Greetings name='Cotrim'/>
+
+        <Blink text={'Blinking TEXT!'} />
 
       </View>
     );
