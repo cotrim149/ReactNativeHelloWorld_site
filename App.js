@@ -15,33 +15,39 @@ import FlexDirection from './components/FlexDirection';
 import JustifyContentBasics from './components/JustifyContentBasics';
 import AlignItems from './components/AlignItems';
 
+import PizzaTranslator from './components/PizzaTranslator';
+
 export default class HelloWorldApp extends Component {
   render() {
     return (
 
-      <ScrollView>
-        <Text>Hello world!</Text>
-        <Bananas></Bananas>
+      <ScrollView style = {{marginTop: 20}}>
 
-        <Greetings name='Jaina'/>
-        <Greetings name='Cotrim'/>
-
-        <Blink text={'Blinking TEXT!'} />
-
-        <LotsOfStyle/>
-        <Text>Flex lessons</Text>
-        <FixedDimensions/>
-        <FlexDimensions/>
-
-        <Text>Flex: Direction</Text>
-        <FlexDirection/>
-
-        <Text>Flex: Justify content </Text>
-        <JustifyContentBasics/>
+        <Text>Pizza Translator</Text>
+        <PizzaTranslator/>
 
         <Text>Flex: Align Items</Text>
         <AlignItems/>
 
+        <Text>Flex: Justify content </Text>
+        <JustifyContentBasics/>
+
+        <Text>Flex: Direction</Text>
+        <FlexDirection/>
+
+        <Text>Flex lessons</Text>
+        <FlexDimensions/>
+        <FixedDimensions/>
+
+        <LotsOfStyle/>
+
+        <Blink text={'Blinking TEXT!'} />
+
+        <Greetings name='Cotrim'/>
+        <Greetings name='Jaina'/>
+
+        <Bananas></Bananas>
+        <Text>Hello world!</Text>
       </ScrollView>
     );
   }
