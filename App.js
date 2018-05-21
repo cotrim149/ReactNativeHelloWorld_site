@@ -11,6 +11,9 @@ import LotsOfStyle from './components/LotsOfStyle';
 
 import FixedDimensions from './components/FixedDimensionsBasics';
 import FlexDimensions from './components/FlexDimensionsBasics';
+import FlexDirection from './components/FlexDirection';
+import JustifyContentBasics from './components/JustifyContentBasics';
+import AlignItems from './components/AlignItems';
 
 export default class HelloWorldApp extends Component {
   render() {
@@ -26,9 +29,19 @@ export default class HelloWorldApp extends Component {
         <Blink text={'Blinking TEXT!'} />
 
         <LotsOfStyle/>
-
+        <Text>Flex lessons</Text>
         <FixedDimensions/>
         <FlexDimensions/>
+
+        <Text>Flex: Direction</Text>
+        <FlexDirection/>
+
+        <Text>Flex: Justify content </Text>
+        <JustifyContentBasics/>
+
+        <Text>Flex: Align Items</Text>
+        <AlignItems/>
+
       </ScrollView>
     );
   }
