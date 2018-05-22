@@ -17,11 +17,16 @@ import AlignItems from './components/AlignItems';
 
 import PizzaTranslator from './components/PizzaTranslator';
 
+import ButtonBasics from './components/ButtonBasics';
+
 export default class HelloWorldApp extends Component {
   render() {
     return (
 
       <ScrollView style = {{marginTop: 20}}>
+
+        <Text>Basics of Button</Text>
+        <ButtonBasics/>
 
         <Text>Pizza Translator</Text>
         <PizzaTranslator/>
