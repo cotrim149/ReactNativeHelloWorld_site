@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Alert, Button, StyleSheet, View } from 'react-native';
 
 export default class ButtonBasics extends Component {
