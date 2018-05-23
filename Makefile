@@ -1,5 +1,5 @@
 install-eslint:
-	npm install -save eslint eslint-plugin-babel eslint-config-rallycoding
+	npm install -save eslint
 
 clean:
 	rm -rf node_modules
