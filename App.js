@@ -20,6 +20,8 @@ import PizzaTranslator from './components/PizzaTranslator';
 import ButtonBasics from './components/ButtonBasics';
 import Touchables from './components/Touchables';
 
+import ScrollPages from './components/ScrollPages';
+
 export default class HelloWorldApp extends Component {
   render() {
     return (
