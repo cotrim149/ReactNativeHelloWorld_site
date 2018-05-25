@@ -3,7 +3,11 @@ import React, {Component} from 'react';
 import {
   Text,
   View,
-  ScrollView } from 'react-native';
+  ScrollView,
+  Button,
+ } from 'react-native';
+
+import { StackNavigator } from 'react-navigation'; // Version can be specified in package.json
 
 import Bananas from '../components/Bananas';
 import Greetings from '../components/Greetings';
@@ -24,7 +28,29 @@ import Touchables from '../components/Touchables';
 import ScrollPages from '../components/ScrollPages';
 
 
-export default class HomeScreen extends Component {
+export default class HomeScreen extends React.Component {
+
+  static navigationOptions = ({ navigation }) => {
+    const params = navigation.state.params || {};
+
+    return ({
+      title: 'Playground Home',
+      // If you want to put a image in place of title, uncomment line bellow
+      // headerTitle: <LogoTitle />,
+      // headerLeft: (
+      //   <Button
+      //     onPress={() => navigation.navigate('MyModal')}
+      //     title="Info"
+      //     color="#fff"
+      //   />
+      // ),
+      // headerBackTitle: 'Voltar',
+      // headerRight: (
+      //   <Button onPress={params.increaseCount} title="+1" color="#fff" />
+      // ),
+    });
+  };
+
 
   render(){
     return(
@@ -56,11 +82,13 @@ export default class HomeScreen extends Component {
 
       <Blink text={'Blinking TEXT!'} />
 
-      <Greetings name='Cotrim'/>
-      <Greetings name='Jaina'/>
+      <Button title='Greetings' onPress = {() => {
+        this.props.navigation.navigate('Greeting');
+      }}/>
 
-      <Bananas></Bananas>
-      <Text>Hello world!</Text>
+      <Button title='Banana Screen' onPress = {() => {
+        this.props.navigation.navigate('Banana');
+      }} />
     </ScrollView>
     );
   }
