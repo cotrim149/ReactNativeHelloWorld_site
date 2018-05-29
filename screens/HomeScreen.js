@@ -75,12 +75,25 @@ export default class HomeScreen extends React.Component {
       <FlexDirection/>
 
       <Text>Flex lessons</Text>
+      <View style={{ flexDirection: 'row' ,justifyContent: 'space-around'}}>
+        <Button title='Fixed Dimension' onPress= {() => {
+          this.props.navigation.navigate('FixedDimension');
+        }}/>      
+        <Button title='Flex Dimension' onPress= {() => {
+          this.props.navigation.navigate('FlexDimensions');
+        }}/>
+      </View>
+
+
       <FlexDimensions/>
-      <FixedDimensions/>
 
-      <LotsOfStyle/>
+      <Button title = 'Lots of Style' onPress = {() => {
+        this.props.navigation.navigate('LotsOfStyle');
+      }}/>
 
-      <Blink text={'Blinking TEXT!'} />
+      <Button title='Blink' onPress= {() => {
+        this.props.navigation.navigate('Blink');
+      }}/>
 
       <Button title='Greetings' onPress = {() => {
         this.props.navigation.navigate('Greeting');
